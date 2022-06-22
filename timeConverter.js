@@ -3,7 +3,7 @@ const submitBtn = document.getElementById('submit');
 let twelveHours;
 
 inputValue.addEventListener ('input', () => {
-    twelveHours = parseInt(tInput, 10)
+    twelveHours = parseInt(inputValue, 10)
 });
 
 let time;
