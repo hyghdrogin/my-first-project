@@ -10,7 +10,7 @@ let time;
 
 twelveHours = parseInt(inputValue, 10)
 function ediTime(inputValue) {
-    time = tInput.split(":");
+    time = inputValue.split(":");
     const hour = parseInt(time[0]);
     const minute = parseInt(time[1]);
     
