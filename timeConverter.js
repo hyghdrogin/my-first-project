@@ -1,27 +1,29 @@
-const inputValue = document.getElementById('abc').value;
+const inputValue = document.getElementById('abc');
 const submitBtn = document.getElementById('submit');
-let twelveHours;
+const result = document.getElementById('result').innerHTML;
+let text;
 
-inputValue.addEventListener ('input', () => {
-    twelveHours = parseInt(inputValue, 10)
-});
-
-let time;
-
-twelveHours = parseInt(inputValue, 10)
-function ediTime(inputValue) {
-    time = inputValue.split(":");
-    const hour = parseInt(time[0]);
-    const minute = parseInt(time[1]);
+function ediTime() {
+    let hours = 0;
+    let mins = 0;
+    let time = ""
+    let twelveHours = inputValue.value;
+    time = twelveHours.split(":");
+    hours = parseInt(time[0]);
+    mins = parseInt(time[1]);
     
-    if ( hour >= 13) {
-        return `The time is ${hour} : ${minute} pm.`;
+    if ( hours >= 13) {
+        return `${hours - 12}:${mins} pm.`;
     }
-    if (hour <= 12) {
-        return `The time is ${hour} : ${minute} am.`;
+    if (hours <= 12) {
+        return `${hours}:${mins} am.`;
     }
 }
 
+
 submitBtn.addEventListener('click', () => {
-    ediTime(inputValue);
+    document.getElementById('result').innerHTML = ediTime(inputValue);
 });
+
+
+
