@@ -1,9 +1,9 @@
 const inputValue = document.getElementById('abc');
 const submitBtn = document.getElementById('submit');
 const result = document.getElementById('result').innerHTML;
-let text;
 
-function ediTime() {
+const ediTime = () => {
+    
     let hours = 0;
     let mins = 0;
     let time = ""
@@ -22,7 +22,7 @@ function ediTime() {
 
 
 submitBtn.addEventListener('click', () => {
-    document.getElementById('result').innerHTML = ediTime(inputValue);
+    document.getElementById('result').innerHTML = ediTime();
 });
 
 
